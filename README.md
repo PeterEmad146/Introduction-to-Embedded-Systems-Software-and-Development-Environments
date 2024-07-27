@@ -23,7 +23,7 @@ For any inquiries or comments, you can reach me at:
 [LinkedIn](https://www.linkedin.com/in/peteremad146/)
 
 <div align=center>
-  <img src="https://www.langoly.com/wp-content/uploads/2021/09/coursera-logo.png" width="75">
+  <img src="https://www.langoly.com/wp-content/uploads/2021/09/coursera-logo.png" width="70">
   
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/University_of_Colorado_Boulder_logo.png" width="350"> 
+  <img src="https://cdn-gdhah.nitrocdn.com/VtlHNiClMsEARfCIyqRJharvNeXzwcSj/assets/images/optimized/rev-57e0023/www.globaladmissions.com/uploads/school_logos/university-of-colorado-boulder.png" width="80"> 
 </div>
