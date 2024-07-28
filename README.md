@@ -11,7 +11,7 @@ In this repository, you'll find:
 
 ## Course Overview
 
-### Module 1 - Embedded System Development Componenets
+### Module 1 - Embedded System Development Components
 * Embedded Systems Overview
   > Environment <br>
   > Hardware <br>
