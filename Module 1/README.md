@@ -83,3 +83,29 @@
 
 - Embedded C is different from C because it puts some focus on some embedded features like efficient memory management, Timing centric operations, direction hardware/IO control, code size constraints, and optimize execution.
 
+- Declaring variables in C programs requires a specific format with many fields
+    * types-qualifiers(s) type-modifier data-type variable-name = initial-value;
+
+- Data Types:
+    * Integer
+    * Floating Point
+    * Enumerated
+    * Derived
+    * Void
+
+- Type modifiers are used to increase the size of these types or change the properties of the variables.
+- Type Modifiers:
+    * Short 
+    * Long
+    * Unsigned
+    * Signed 
+
+- Type Qualifiers:
+    * Const
+    * Volatile
+    * Restrict
+
+- Signed Numbers are represented in the two's complement form, the conversion of sign numbers is a little more complex because they split the number of unique binary combinations in half (half for +ve numbers, other half for -ve numbers).
+
+- **Pointers:** are special data types that hold address information. They are used to pass data by reference and can point to any type.
+
