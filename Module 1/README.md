@@ -109,3 +109,35 @@
 
 - **Pointers:** are special data types that hold address information. They are used to pass data by reference and can point to any type.
 
+- Developing software can require a lot of process
+    > Used directly by software engineers in development
+    * Software Requirements
+    * Environment Information
+    * Software Build and Release
+    * Software Review
+    * Version Control
+    * Testing 
+    * Support
+    > Used to help organize and support software projects
+    * Documentation
+    * Defect Tracking 
+    * Task Management
+
+- Legacy Systems: Older systems that may or may not be supported anymore. 
+    > Software or hardware is outdated <br>
+    > A loss of compatibility <br>
+    > Parts not available <br>
+    > Off company roadmap <br>
+
+- C-Programming Standards
+    * C11
+    * C99
+    * C89 (ANSI-C) / C90 (ISO-C)
+    * K&R C-Programming: Late 1970's (Informal Standard)
+
+- Purposes of a coding standard 
+    * Makes code readable
+    * Improves runtime efficiency
+    * Ensures consistency between various coders
+    * Helps protect copyright claims
+
