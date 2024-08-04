@@ -189,3 +189,64 @@
     * ls ==> list all the current directories and files that are in the current working directory.
     * cd ==> change directory, this command changes the current working directory to another one.
 
+### Development Kits and Documentation
+
+- Development kits are an important tool for software engineers to start becoming familiar with an architecture.
+
+- There are many manufacturers of microcontroller integrated circuits, <code style="color: red">ICs</code>, or application-specific integrated circuits, <code style="color: red">ASICs</code>, in the industry.
+
+- Some examples include:
+    * Texas Insturments
+    * Silicon Labs
+    * Atmel
+    * NXP Semiconductors
+
+- Some important features you need to know before selecting a microcontroller to work with:
+    * Word Size
+    * Number of registers
+    * Flash/RAM sizes
+    * Branch Prediction Support
+    * Instruction/Data Cache Support
+    * Floating Point Arithmetic Support
+    * DMA Support
+
+- The process of creating this feature and operation requirements checklist is called a specification, or a features spec. 
+
+- It's possible that you need to make significant software changes, or even a hardware chage, int the middle of a design process if you did not evaluate your initial designs correctly.
+
+- There are many documents that describe how to pick out a platform or evaluate a particular chip. 
+
+- <code style="color : yellow">Selector Guide</code>: This helps a suer slip down choices by interactively selecting feature sets for our design. 
+
+- It shows a full processor family. A chip family will share the same chip architecture. Each sub-family typically has more differences in supported hardware. And each device in a sub-family only has a slightly variances form on sub-family part to another. 
+
+- <code style ="color : yellow">Product Brief</code>: gives a concise overview for quick evaluation of a platform for design, but with more details that what you will see in the selector guide. This is much more marketed, and is far less dense than strict product specifications.
+
+- <code style="color:yellow">Datasheet</code>: gives technical specifications on a chip or family of chips with a breakdown of all the differences between each version or part number within the family. 
+- Pin counts as well as operation specifications are proveded with diagrams, tables and plots.
+- These operation specifications can include many things:
+    > Electrical characteristics such as voltage and current operating ratings, where we get information on power specs of various conditions and operating modes.
+
+    > Timing characterisitcs are provided for our operation microcontroller. There are timing diagrams that show expected time delays before certain digital signals are asserted.
+
+    > Environmental effects such as temperature, can affect the device or operation characteristics.
+
+    > Physical Package such as a CAD drawing with dimensions for the physical package and footprints of the chip.
+
+- <code style="color:yellow">Family Technical Reference Manual</code>: describes information on general platform componenets and configuration. 
+
+- <code style="color:yellow">Chip Errata</code>: a document that contains additional and corrective information for our particular device set. It will list all problems with the description configuration or the hardware's operation. 
+
+- Many businesses just create developmetn kits and module boards so that prototyping can be done easily, speeding up the time it takes chip manufacturers to get their products in customer hands for evaluation. 
+
+- Here are two examples:
+    * <code style="color:blue">The Freedom FRDM-KL25Z</code> --> this board is a product of NXP and has many impressive features including:
+        * some supplemental external hardware
+        * a capacitive touch slide
+        * an RGB LED
+        * an accelerometer
+
+    * <code style="color:blue">The Nordic nRF24L01 Chip</code> --> this is not a microcontroller development kits. Development kits are not limited to microcontroller silicon manufacturers since any type of sensor, external memory, driver or communication device would want to be evaluated. The part is difficult package to solder called a <code style="color:yellow">QFN package</code> and that may have specific requirements for its antenna. 
+
+- Some boards have on board programmer/debugger support, which may be a secondary processor which is used to run as an onboard programmer/debugger adaptor that can flash the target processor, this adaptor is called <code style="color:yellow">openSDA</code> which has a specialized, dedicated connection to the processor target for debug support and chip programming. 
+
