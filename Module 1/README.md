@@ -1,6 +1,8 @@
 # Module 1
 ## Embedded System Development Components
 
+### Introduction to Embedded Systems
+
 - Software Requirements
     * IDE: Code Composer Studio (CCS) 
     * Serial Terminal Emulator: RealTerm
@@ -29,14 +31,20 @@
 
 - CPU contains:
     * Registers
+    > a type of computer memory built directly into the CPU that is used to store and manipulate data during the execution of insturctions.
+
     * Arithmetic Logic Unit (ALU)
-    * Interrupt Controller
+    > a digital circuit used to perform arithmetic and logic operations.
+
+    * Interrupt Controller 
+    > a component that gathers hardware interrupts events from various sources and presents them to processor
+
     * Debug
 
 - The CPU and its subsystems interact with other mircocontroller resources through one or more buses.
 - A bus controller aids the processor in this data transmission between memory and peripherals.
 
-- Memory holds data that we operate on as well as the program that we're executing. This data is stored in a combination of flass and Random Access Memory (RAM). 
+- Memory holds data that we operate on as well as the program that we're executing. This data is stored in a combination of flash and Random Access Memory (RAM). 
 
 - A clock system provides synchornization across all these components.
 
@@ -46,6 +54,8 @@
     * Input/Output
     * Timing
     * Processor support 
+
+### Embedded Software Engineering
 
 - It's good to start by breaking a software concept down into flow diagrams or software blocks.
 
@@ -81,6 +91,9 @@
     * Efficient
     * Consistent
 
+
+### C-Programming Review
+
 - Embedded C is different from C because it puts some focus on some embedded features like efficient memory management, Timing centric operations, direction hardware/IO control, code size constraints, and optimize execution.
 
 - Declaring variables in C programs requires a specific format with many fields
@@ -109,6 +122,12 @@
 
 - **Pointers:** are special data types that hold address information. They are used to pass data by reference and can point to any type.
 
+### Introduction to Software Configuration Management
+
+- Software configuration management (SCM) is the process that handles how we configure and go about developing the code for the project.
+
+- SCM simply describes how the software is developed and organized.
+
 - Developing software can require a lot of process
     > Used directly by software engineers in development
     * Software Requirements
@@ -124,10 +143,15 @@
     * Task Management
 
 - Legacy Systems: Older systems that may or may not be supported anymore. 
-    > Software or hardware is outdated <br>
-    > A loss of compatibility <br>
-    > Parts not available <br>
-    > Off company roadmap <br>
+    > Software or hardware is outdated 
+
+    > A loss of compatibility 
+
+    > Parts not available 
+
+    > Off company roadmap
+
+### C Standardization and Team Coding Standards
 
 - C-Programming Standards
     * C11
@@ -140,4 +164,28 @@
     * Improves runtime efficiency
     * Ensures consistency between various coders
     * Helps protect copyright claims
+
+### Development Environments Overview
+
+- The primary goal of the development environment would be to allow engineers to write, compile, install and debug a program.
+
+- There are two different desktop environment that can be used in development:
+    * The command line interface (CLI) 
+    > Building software project using the CLI is a very usefull skill as it gives us powerful level of control of applictions, but at the expense of the user interface. 
+
+    > For compilation, we will use GNU toolset to generate the SW executable files.
+
+    > Installation and debugging are architecture dependent processes, host debugging can utilize a command line tool called GDB which stands for GNU project debugger.
+
+    > On target debugging can be done through a network debugger or connected hardware debugger.
+
+    * The integrated development environment (IDE)
+    > The IDE encapsulates all the above complex details and provides a much more interactive user interface to make it easier to finish the job, but since the IDE hides some details from the developer, then it restrics the developer's degrees of freedom which becomes less ideal of them to work with IDEs
+
+    > However, IDEs basically run behind the scenes the exact same commands as the commands we sue in the CLI. 
+
+- Some basic Linux command line commands are:
+    * pwd ==> shows the location of the present working directory.
+    * ls ==> list all the current directories and files that are in the current working directory.
+    * cd ==> change directory, this command changes the current working directory to another one.
 
