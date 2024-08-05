@@ -1,7 +1,7 @@
 # Module 1
 ## Embedded System Development Components
 
-### Introduction to Embedded Systems
+### <code style="color:cyan">Introduction to Embedded Systems</code>
 
 - Software Requirements
     * IDE: Code Composer Studio (CCS) 
@@ -55,7 +55,7 @@
     * Timing
     * Processor support 
 
-### Embedded Software Engineering
+### <code style="color:cyan">Embedded Software Engineering</code>
 
 - It's good to start by breaking a software concept down into flow diagrams or software blocks.
 
@@ -92,7 +92,7 @@
     * Consistent
 
 
-### C-Programming Review
+### <code style="color:cyan">C-Programming Review</code>
 
 - Embedded C is different from C because it puts some focus on some embedded features like efficient memory management, Timing centric operations, direction hardware/IO control, code size constraints, and optimize execution.
 
@@ -122,7 +122,7 @@
 
 - **Pointers:** are special data types that hold address information. They are used to pass data by reference and can point to any type.
 
-### Introduction to Software Configuration Management
+### <code style="color:cyan">Introduction to Software Configuration Management</code>
 
 - Software configuration management (SCM) is the process that handles how we configure and go about developing the code for the project.
 
@@ -151,7 +151,7 @@
 
     > Off company roadmap
 
-### C Standardization and Team Coding Standards
+### <code style="color:cyan">C Standardization and Team Coding Standards</code>
 
 - C-Programming Standards
     * C11
@@ -165,7 +165,7 @@
     * Ensures consistency between various coders
     * Helps protect copyright claims
 
-### Development Environments Overview
+### <code style="color:cyan">Development Environments Overview</code>
 
 - The primary goal of the development environment would be to allow engineers to write, compile, install and debug a program.
 
@@ -189,7 +189,7 @@
     * ls ==> list all the current directories and files that are in the current working directory.
     * cd ==> change directory, this command changes the current working directory to another one.
 
-### Development Kits and Documentation
+### <code style="color:cyan">Development Kits and Documentation</code>
 
 - Development kits are an important tool for software engineers to start becoming familiar with an architecture.
 
@@ -249,4 +249,17 @@
     * <code style="color:blue">The Nordic nRF24L01 Chip</code> --> this is not a microcontroller development kits. Development kits are not limited to microcontroller silicon manufacturers since any type of sensor, external memory, driver or communication device would want to be evaluated. The part is difficult package to solder called a <code style="color:yellow">QFN package</code> and that may have specific requirements for its antenna. 
 
 - Some boards have on board programmer/debugger support, which may be a secondary processor which is used to run as an onboard programmer/debugger adaptor that can flash the target processor, this adaptor is called <code style="color:yellow">openSDA</code> which has a specialized, dedicated connection to the processor target for debug support and chip programming. 
+
+### <code style="color:cyan">Version Control</code>
+
+- Version Control will be used to track our software changes. 
+
+- There are many different types of VCS:
+    * Concurrent Versions Systems (CVS)
+    * Subversion (SVN)
+    * Mercurial
+    * IBM Rational ClearCase
+    * Git
+
+- In a Git repo configuration and management files are stores in a folder called <code style="color:yellow">.git</code>
 
