@@ -33,7 +33,7 @@
     > Installation will require other tools
 
 <div align=center>
-    <img src="./pics/Build Process.jpg">
+    <img src="./pics/Build Process.jpg" alt="Build Process Illustration">
 </div>
 
 - Once you compile a project, the executable only work on the architecture you compiled at for. It cannot be run on other systems.
