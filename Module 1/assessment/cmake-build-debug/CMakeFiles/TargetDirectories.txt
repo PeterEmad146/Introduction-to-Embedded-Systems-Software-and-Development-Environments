@@ -1,0 +1,3 @@
+D:/Work/Courses/Introduction to Embedded Systems Software and Development Environments/Module 1/assessment/cmake-build-debug/CMakeFiles/assessment.dir
+D:/Work/Courses/Introduction to Embedded Systems Software and Development Environments/Module 1/assessment/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Work/Courses/Introduction to Embedded Systems Software and Development Environments/Module 1/assessment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
