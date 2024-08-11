@@ -49,3 +49,36 @@
     > Tool that contorls the generation of executables and other non-source files of a program from the program's source files.
 
 
+### <code style="color:cyan">Compiling and Invoking GCC</code>
+
+- Compilation is the process of converting high level software language to architecture specific binary encoded operations. 
+
+- .i files is the file extension used for files outputs from preprocessing.
+
+- Compilers:
+    * Native Compiler: <code style = "color:red">gcc -> gcc-4.8</code>
+    > For Code run on the host machine.
+
+    * Cross Compiler: <code style="color:red">arm-none-eabi-gcc</code>
+    > For code run on the target processor.
+
+- Build Files:
+    * Assembly Files --> .s Extension
+    * Object Files --> .o Extension
+    * Library Files --> .a Extension (with .h)
+    * Executable Files --> Extension Varies
+
+- C code gets inverted into architecture specific assembly. This conversion is a decomposition of C operations into numerous assembly operations.
+
+- The assembler can be found of as a compiler as it converts assembly language into binary coded operations.
+
+- GCC commands will have the following form: <code style="color:red">$ gcc [OPTIONS] [FILE]</code>.
+
+<div align=center>
+    <img src="./pics/General Compiler Flags.jpg" alt="General Compiler Flags Illustration">
+</div>
+
+<div align=center>
+    <img src="./pics/Architecture Specific Compiler Flags.jpg" alt="Architecture Specific Compiler Flags Illustration.">
+</div>
+
