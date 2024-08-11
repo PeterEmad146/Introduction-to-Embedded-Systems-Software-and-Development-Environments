@@ -109,4 +109,31 @@
 
     > Unrecognized pragmas will be ignored.
 
-    
+### <code style="color:cyan">Creating Header and Implementation Files</code>
+
+- Libraries: Collection of software (precompiled or direct source)
+
+- Modules: Software Organization that each module has encapsulated certain functionality within a library
+
+- Each module will contains two files. 
+
+- The first is an implementation file or the c file, the source file. This contains functions definitions and other c code.
+
+- The other file is a header file. This contains function declarations, macros, and even certain derived data type definitions, like enumerations or structures.
+
+<div align=center>
+    <img src="./pics/Creating Modules.jpg" alt="Creating Modules Illustration">
+</div>
+
+- <code style="color:red">#pragma once</code> directive is a nonstandard directive, that only certain compilers support. This features alows us to use only a single line to create an include guard. However, because of the limited support, using only this option would not make your code portable to other compilers or compiler versions.
+
+- Compiled Libraries
+    * Static Libraries: Directly linked into your output executable
+        * Installed with the program image as part of the executable
+        * Create using archiver
+
+    * Shared Libraries: Linked dynamically at runtime with your executable
+        * Pre-installed onto target
+        * Used for applications with an operating system
+        * Create with shared flag
+
