@@ -82,3 +82,31 @@
     <img src="./pics/Architecture Specific Compiler Flags.jpg" alt="Architecture Specific Compiler Flags Illustration.">
 </div>
 
+### <code style="color:cyan">Preprocessor Directives</code>
+
+- The preprocessor provides a special keywords called preprocessor directives. The directives begin with a number sign(#) and have many functions.
+
+- They can be used to define constants or features, as well as define macro functions. 
+
+- Macro is a term often used interchangeably with the application of a preprocessor directive. 
+
+- These directives are represented with the <code style="color:red">#def</code> or the <code style="color:red">#undef</code> keywords.
+
+- Coniditonal Compilation can also be performed with the compiler suing the <code style="color:red">#if</code> or <code style="color:red">#else</code> directives.
+
+- Important Directives
+    * #define, #undef
+    > #define MACRO-NAME (MACRO-VALUE)
+
+    > #define MACRO-FUNCTION(PARMS) (OPERATION)
+    * #ifndef, #ifdef, #endif
+    * #include
+    > #include header-name <br>
+    > instructs the preprocessor to paste the text of the given file into the current file.
+    * #warning, #error
+    * #pragma
+    > Gives a specific instruction to the compiler (controls compilation from software instead of command line)
+
+    > Unrecognized pragmas will be ignored.
+
+    
