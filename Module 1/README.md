@@ -267,3 +267,204 @@
 
 - In a Git repo configuration and management files are stores in a folder called <code style="color:yellow">.git</code>
 
+### <code style="color:cyan">QUIZ</code>
+
+1) What differentiates an embedded system from most other desktop or server computer systems? (Mark all that apply)
+
+    * There are more resources on Embedded Systems
+    * Embedded Systems have virtually unlimited memory
+    * Embedded Systems focus on efficient execution of code ✔️
+    * Embedded Systems have a limited amount of hardware ✔️
+    * Embedded Systems are sensetive to timing ✔️
+    * Embedded Systems require a user interface
+
+    <code style="color:green">Explanation:</code> <br>
+    <code style="color:white">✔️Efficient execution of code: Embedded systems are designed to perform specific tasks efficiently, often under resource contrainst.</code> <br>
+    <code style="color:white">✔️Limited Hardware: Embedded systems typically have limited processing power, memeory, and storage compared to desktop or server systems.</code> <br>
+    <code style="color:white">✔️Timing sensitivity: Many Embedded systems are real-time systems, meaning they must operate within strict timing contraints to function corectly.</code> <br>
+
+    <code style="color:red">Incorrect Answer:</code> <br>
+    <code style="color:white">❌There are more resources on Embedded Systems: This is incorrect; embedded systems generally have fewer resources.</code> <br>
+    <code style="color:white">❌Embedded Systems have virtually unlimited memory: This is also incorrect; embedded systems usually have very limited memory.</code> <br>
+    <code style="color:white">❌Embedded Systems require a user interface: While some embedded systems have user interfaces, many do not, and it is not a defining characteristic.</code> <br>
+
+
+2) Which of the options below is a valid function declaration?
+
+    * foo(12);
+    * foo(int x);
+    * int foo(12){return ((x*x)/2);}
+    * int foo(int x);
+    * int foo(int x) {return ((x*x)/2);} ✔️
+    * int foo() {return ((x*x)/2);}
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">This option correctly declares and defines a function 'foo' that takes an integer 'x' as an argument and returns an integer value. The function body calculates and returns the squre of 'x' divided by 2. </code> <br>
+
+    <code style="color:red">Incorrect Answers:</code><br>
+    <code style="color:white">Other options either don't have valid syntax or are incorrect in the context of C/C++ function declarations.</code> <br>
+
+3) Which code declares two variables, an 8-bit type named foo (initialized to hexadecimal FF) and an 8-bit pointer variable named bar that points to the variable foo?
+
+    * int foo = 255; int bar = *foo;
+    * char foo = 255; char8 bar = foo;
+    * char foo = 0xFF; char bar = foo&;
+    * char foo = 255; char * bar = &foo;
+    * char foo 0.FF; char 8 bar = *foo; ✔️
+
+    <code style="color:green">Explanation</code><br>
+    <code style="color:white">'char foo = 255;' declares an 8-bit variable 'foo' and initializes it to 255 (which is 0xFF in hexadecimal). 'char * bar = &foo;' declares a pointer 'bar' that points to 'foo'.</code><br>
+
+    <code style="color:red">Incorrect Answers</code><br>
+    <code style="color:white">The other options either have syntax errors or don't meet the requirements of the question.</code><br>
+
+4) What Embedded Software Development componenets are necessary for developing a project? (select all that apply)
+
+    * Compiler ✔️
+    * Development Kit ✔️
+    * Version Control ✔️
+    * Programmer/Debugger ✔️
+    * Host Machine ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">All these componenets are essential for developing embedded software. A compiler translates the code, a development kit provides the necessary hardware/software tools, verion control manages code changes, a programmer/debugger is used for testing and debugging, and a host machine is where the development occurs.</code><br>
+
+5) Which of these parts of a CPU? (Mark all that apply)
+
+    * Arithmetic Logic Unit (ALU) ✔️
+    * Registers ✔️
+    * Interrupt Controller ✔️
+    * Communication Interfaces like UART, SPI, and I2C
+    * Digital-to-Analog Converters (DAC)
+    * Timers and Pulse With Modulation (PWM) ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">The ALU performs arithmetic and logic operations, registers store temporary data, the interrupt controller manages interrupts, and times/PWMs are used for various timing operation.</code><br>
+
+    <code style="color:red">Incorrect Answers:</code><br>
+    <code style="color:white">Communication Interfaces like UART, SPI, and I2C: These are typically not part of the CPU itself but are peripheral componenets.</code><br>
+    <code style="color:white">Digital-to-Analog Converters (DAC): DACs are also peripheral componenets, not a part of the CPU.</code><br>
+
+6) Which of these parts of a Microcontroller? (Mark all that apply)
+
+    * Arithmetic Logic Unit (ALU) ✔️
+    * Registers ✔️
+    * Interrupt Controller ✔️
+    * Communication interfaces like UART, SPI, and I2C
+    * Digital-to-Analog Converters and PWMs
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">Unlike a CPU, micrcontroller integrates additional componenets such as communication interfaces (UART, SPI, I2C) and DACs/PWMs along with the ALU, registers, and interrupt controller, all on a single chip.</code><br>
+
+7) What will be the values of foo and bar after executing this code?
+    > int i = 0, foo = 0, bar = 0; <br>
+    > while(i < 17) { <br>
+    >    i++; <br>
+    >    foo += i; <br>
+    > } <br>
+    > for(i=0; i<17; i++) { <br>
+    >    bar += i; <br>
+    > }
+
+    * 17, 16
+    * 16, 17
+    * 18, 17
+    * None ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">The variable 'foo' will accumulate the sum of numbers from 1 to 17, which equals 153. The variable 'bar' will accumulate the sum of numbers from 0 to 16, which equals 136. None of the given options match these values, so the correct answer is "None."</code><br>
+
+8) What is the value of a after these three bitwise operations (in hexadecimal)?
+    > unsigned short a = 0xFFFF; <br>
+    > a = ~(a ^(a<<4)); 
+
+    * 0xFFF0 ✔️
+    * 0xEEE0
+    * 0x0000
+    * 0xFFFF
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">'a = 0xFFFF' sets all bits to 1. The XOR operation flips some bits, and the NOT operation further manipulates them. The result of these operations is '0xFFF0'.</code><br>
+
+9) What is the following unsigned binary number in decimal, ob110101101? 
+
+    * 256
+    * 429 ✔️
+    * 180
+    * 511
+    * None of the Above
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">The binary number '110101101' converts to 429 in decimal</code><br>
+
+10) Which of the following statements are true about this code? (Mark all that apply)
+    > void main () { <br>
+    >   int x; <br>
+    >   unsigned int i; <br>
+    >   for (i = 0; i >= 0; ) { <br>
+    >      x = ++i; <br>
+    >   } <br>
+    >   return; <br>
+    > }
+
+    * For Loop never exits ✔️
+    * For Loop never enters
+    * The variable i will overflow ✔️
+    * The variable x will overflow ✔️
+    * The pre-increment on i will not work
+    * The keyword unsigned is not a C-keyword
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">Since 'i' is an unsigned integer, it will continuously increase without ever becoming negative, causing an infinite loop. As 'i' increases, it will eventually overflow, as will the variable 'x'.</code><br>
+
+    <code style="color:red">Incorrect Answers:</code><br>
+    <code style="color:white">The other options either incorrectly describe the behavior of the code or are incorrect statements about the C language.</code><br>
+
+11) What are the purposes of a team coding standard? (Mark al that apply)
+
+    * Makes code readable ✔️
+    * Improves runtime effciency
+    * Ensures consistency between various coders ✔️
+    * Helps protect copyright claims ✔️
+    * Encourages disagreements about tabs versus spaces ✔️
+    * Always reduces code size
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">A coding standard ensures code readability and consistency, protects copyright claims by following best practices, and often sparks debates over formatting styles like tabs vs. spaces.</code><br>
+
+12) What is the following signed 2's complement binary number in decimal, 0b110101101? 
+
+    * -256
+    * -173
+    * -180
+    * -1
+    * -83 ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">In 2's complement representation, the binary number '110101101' corresponds to -83 in decimal.</code><br>
+
+13) What git commands allow developers to get access to other developers software? (Select all that apply)
+
+    * git commit
+    * git add
+    * git push 
+    * git pull / git fetch ✔️
+    * git branch
+    * git clone ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">'git clone' is used to create a local copy of a repository, while 'git pull' and 'git fetch' are used to update the local repository with changes from the remote repository.</code><br>
+
+14) Architecture independance and software portability can be achieved by ... (Select all that apply):
+
+    * Creating Hardware Abstraction Layers ✔️
+    * Writing only in assembly level languages
+    * Using High level languages
+    * Designing software modularly ✔️
+
+    <code style="color:green">Explanation:</code><br>
+    <code style="color:white">Hardware Abstraction Layers (HAL) and modular software design allow code to be more portable and independent of the underlying hardware architecture.</code><br>
+
+    <code style="color:red">Incorrect Answers:</code><br>
+    <code style="color:white">❌Writing only in assembly level languages: This actually reduces portability.</code><br>
+    <code style="color:white">❌Using High level languages: While high-level languages can improve portability, it's the combination of modular design and HALs that truly enhances it.</code><br>
