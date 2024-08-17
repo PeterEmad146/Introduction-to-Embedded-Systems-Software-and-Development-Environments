@@ -25,6 +25,8 @@
 
 - **Microcontroller:** is a microprocessor with added functionality such as memory peripheral hardware.
 
+- **Microprocessor:** is a computer processor for which the data processing logic and control is included on a single integrated circuit (IC), or small number of ICs. The microprocessor contains the arithmetic, logic and control circuitry required to perform the functions of a computer's central processing unit (CPU). The microprocessor is a multipurpose, clock-driven, register-based, digital integrated circuit that accepts binary data as input, processes it according to instructions stored in its memory, and provides results (in binary) as output.
+
 - The processor part of the microcontroller is called the Centeral Processing Unit (CPU).
 
 - **CPU:** a piece of hardware that runs our software by fetching and executing assembling  instructions for memory.
@@ -46,6 +48,8 @@
 
 - Memory holds data that we operate on as well as the program that we're executing. This data is stored in a combination of flash and Random Access Memory (RAM). 
 
+- RAM is volatile (not permanent) as when power is turned off, RAM loses all its data, while Flash can keep its data intact with not power at all. 
+
 - A clock system provides synchornization across all these components.
 
 - Peripherals that may be included:
@@ -65,11 +69,11 @@
 
 - A software block diagram can also depict a software system in layers.
 
-- Software that directly interacts with hardware is called Bare-metal firmware.
+- Software that directly interacts with hardware is called <code style="color:red">Bare-metal firmware</code>.
 
 - Hardware Abstraction Layer (HAL) allows the application layer developer to write platform independent code. 
 
-- A common software block design method is called component design, where we define small functional software blocks that have certain tasks. We define the interface mechanisms and the specs that each module needs to adhere to. 
+- A common software block design method is called <code style="color:red">component design</code>, where we define small functional software blocks that have certain tasks. We define the interface mechanisms and the specs that each module needs to adhere to. 
 
 - On-Target Testing refers to a term where you install the code onto your particular embedded systems instead of another. 
 
