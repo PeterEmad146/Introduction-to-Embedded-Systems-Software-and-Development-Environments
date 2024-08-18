@@ -229,7 +229,7 @@
     * Custom Makefiles offer better maintainability and portability compared to IDE-generated ones, which are often less flexible.
 
 - Example usage of Make includes creating a main Makefile and additional files to manage targets and build options.
-    - Running commands like <code style="color:red">make all</code> performs a complete build, <code style="color:red"> make clean</code> removes generated files, and specific targets can be build individually.
+    - Running commands like <code style="color:red">make all</code> performs a complete build, <code style="color:red">make clean</code> removes generated files, and specific targets can be build individually.
 
 - Build systems are crucial for software teams to avoid tedious and error-prone build processes. 
     - While there are various build generation systems, Make remains widely used due to its effectiveness in managing complex builds.
