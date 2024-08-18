@@ -43,6 +43,6 @@ For any inquiries or comments, you can reach me at:
 [LinkedIn](https://www.linkedin.com/in/peteremad146/)
 
 <div align=center>
-  <img src="https://www.langoly.com/wp-content/uploads/2021/09/coursera-logo.png" width="70">
-  <img src="https://cdn-gdhah.nitrocdn.com/VtlHNiClMsEARfCIyqRJharvNeXzwcSj/assets/images/optimized/rev-57e0023/www.globaladmissions.com/uploads/school_logos/university-of-colorado-boulder.png" width="80"> 
+  <img src="https://www.langoly.com/wp-content/uploads/2021/09/coursera-logo.png" height="70">
+  <img src="https://www.cuindependent.com/new/wp-content/uploads/2016/08/colorado-buffaloes.png" height="70"> 
 </div>
