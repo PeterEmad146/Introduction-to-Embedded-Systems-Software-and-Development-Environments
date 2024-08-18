@@ -45,6 +45,10 @@
 - <code style="color:red">GCC = GNU's Compiler Collection</code>
     > Contains many tools (compiler, assembler, linker, etc)
 
+    > GCC is a toolchain that compiles code, links it with any library dependencies, converts that code to assembly, and the prepares executable files. It follows the standard UNIX design philosophy of using simple tools that perform individual tasks well. 
+
+    > When you run GCC on a source code file, it first uses a preprocessor to include header files and discard comments. Next, it tokenizes the code, expands macros, detects any compile-time issues, then prepares it for compilation. It is then sent to the compiler, which creates syntax trees of the program's objects and control flow and uses those to generate assembly code. The assembler then converts this code into the binary executable format of the system. Finally, the linker includes references to any external libraries as needed. The finished product is then executable on the target system.
+
 - <code style="color:red">GNU Make</code>
     > Tool that contorls the generation of executables and other non-source files of a program from the program's source files.
 
@@ -137,3 +141,51 @@
         * Used for applications with an operating system
         * Create with shared flag
 
+### <code style="color:cyan">Linkers</code>
+
+- The last two steps of the build process, linking and locating, are typically combined into one stage. 
+    * The linker combines compiled object files into a single object file or executable.
+    * The locator maps the object into specific address locations, creating an executable program for the embedded processor.
+
+- The traditional linear build model is not typical for software projects due to the involvement of multiple input files.
+    * The process usually involves various sources like different types of source files, libraries, and linker files.
+
+- Assembly and C files are compiled into objects within the same project, and compiled library code is pulled in during the linking stage.
+    * A linker file is also input into the linking and locating stage, instructing the locator on how to map the executable into proper addresses using the <code style="color:red">-T</code> flag.
+
+- The linker's primary responsiblity is to combine all compiled object files into a single executable.
+    * This process is handled directly by the LD application or indirectly by GCC.
+    * Each object file contains different memeory segments, such as code memory and data memory, which need to be merged, mapped, and assigned addresses.
+
+- Symbols used across multiple files or modules need to be properly mapped so that the location of the symbol's address is assigned correctly.
+    * If a symbol isn't properly declared or included, the linker will search through object sources and library paths to resolve it, throwing an error if unresolved.
+
+- Static libraries are directly linked at linking time using the <code style="color:red">-l</code> flag, while dynamic libraries reference paths already installed on the device. 
+    * In embedded systems, dynamically linking at runtime cna save code space since libraries are often pre-installed on the device.
+
+- Startup routines, usually defined in C standard libraries, are included as static libraries in the build.
+    * If the linker is invoked directly, these libraries must be incuded manually.
+    * The <code style="color:red">-nostdlib</code> flag can stop linking startup routines and libraries, but this requires manual definition of initialization and exit routines.
+
+- The final output of the linking process is a relocatable file containing multiple segments of code blocks.
+    * This file needs to be mapped into the architecture's memory regions, with the linker file providing instructions for memory relocation, including segment names, memory sizes, and access permissions. 
+
+- During program installation, the executable is split into various physical memory regions, such as code, initialization data, stack, and heap.
+    * The linker must specify the start location and length of each memory segment.
+    * Linker scripts can include checks to ensure memory regions are not overllocated, preventing issues like stack and heap overflow.
+
+- Data memory is typically set as read and write (RW), while code memory is set as read and execute (RX) to prevent accidental overwriting and enhance security.
+    * Some processors enforce security by causing a fatal error if code is executed from the data memroy region instead of code memory.
+
+- A linker file example shows how physical memroy spaces are mapped, with code memory placed in flash and data memory in SRAM.
+    * After linking and locating, a map file can be generated to provide detailed information on memory allocation, including specific addresses.
+
+- Several linker flags, such as <code style="color:red">-o</code> for code optimization and <code style="color:red">-Wl</code> or <code style="color:red">-Xlinker</code> for passing flags through GCC, provide additional control during the linking process.
+    * The output executable file format varies depending on the installer and architecture, with common formats including Intel Hex, ELF, and ARM Image Format.
+
+- Linking is a complex process that involves managing various input files, including object files, library files, and linker files.
+    * Expertise in architecture is necessary for defining memory regions, making embedded software engineers crucial in both designing code and ensuring it fits into the memory space. 
+
+<div align=center>
+    <img src="./pics/Linker Flags.jpg" alt="Linker Flags Illustration">
+</div>
