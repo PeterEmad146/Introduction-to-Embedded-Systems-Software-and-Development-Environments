@@ -119,6 +119,15 @@
 
 - Macro is a term often used interchangeably with the application of a preprocessor directive. 
 
+- Preprocessor directives consist of the following:
+    * <code style="color:red">Macro definition directives</code> which replace tokens in the current file wiht specified replacement tokens.
+    * <code style="color:red">File inclusion directives</code> which imbed files within the current file.
+    * <code style="color:red">Conditional Compilation directives</code> which conditinally compile sections of the current file.
+    * <code style="color:red">Message generation directives</code> which control the generation of diagnostic messages
+    * <code style="color:red">The null directive (#)</code> which performs not action
+    * <code style="color:red">Pragma directives</code> which apply compiler-specific rules to specified sections of code
+    * <code style="color:red">C99 preprocessor features adopted in C++11</code>
+
 - These directives are represented with the <code style="color:red">#def</code> or the <code style="color:red">#undef</code> keywords.
 
 - Coniditonal Compilation can also be performed with the compiler suing the <code style="color:red">#if</code> or <code style="color:red">#else</code> directives.
