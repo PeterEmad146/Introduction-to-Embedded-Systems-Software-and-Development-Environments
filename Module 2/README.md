@@ -128,8 +128,6 @@
     * <code style="color:red">Pragma directives</code> which apply compiler-specific rules to specified sections of code
     * <code style="color:red">C99 preprocessor features adopted in C++11</code>
 
-- These directives are represented with the <code style="color:red">#def</code> or the <code style="color:red">#undef</code> keywords.
-
 - Coniditonal Compilation can also be performed with the compiler suing the <code style="color:red">#if</code> or <code style="color:red">#else</code> directives.
 
 - Important Directives
