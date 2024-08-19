@@ -79,11 +79,36 @@
 - GCC commands will have the following form: <code style="color:red">$ gcc [OPTIONS] [FILE]</code>.
 
 <div align=center>
-    <img src="./pics/General Compiler Flags.jpg" alt="General Compiler Flags Illustration">
+<h3><code style="color:orange">General Compiler Flags</code></h3>
+
+| Option & Format          | Format                                               |
+|:------------------------:|:----------------------------------------------------:|
+| -c                       | Compile and Assemble File, Do Not Link               |
+| -o FILE                  | Compile, Assemble, and Link to OUTPUT_FILE           |
+| -g                       | Generate Debugging Information in Executable         |
+| -Wall                    | Enable All Warning Messages                          |
+| -Werror                  | Treat All Warnings as Errors                         |
+| -I FILE                  | Include this <DIR> to Look for Header Files          |
+| -ansi <br> -std=STANDARD | Specify which standard Version to Use (ex: c89, c99) |
+| -v                       | Verbose Output from GCC                              |
+
 </div>
 
 <div align=center>
-    <img src="./pics/Architecture Specific Compiler Flags.jpg" alt="Architecture Specific Compiler Flags Illustration.">
+<h3><code style="color:orange">Architecture Specific Compiler Flags</code></h3>
+
+
+| Option & Format   | Purpose                                                             |
+|:-----------------:|:-------------------------------------------------------------------:|
+| -mcpu=NAME        | Specifies Target ARM Processor and Architecture (ex: cortex-m0plus) |
+| -march=NAME       | Target ARM Architecture (ex: armv7-m, thumb)                        |
+| -mtune=NAME       | Target ARM Processor (ex: cortex-m0plus)                            |
+| -mthumb           | Generate code in Thumb States (ISA)                                 |
+| -marm             | Generate code in ARM State  (ISA)                                   |
+| -mthumb-interwork | Generate code that supports calling between ARM and Thumb (ISA)     |
+| -mlittle-endian   | Generate code for Little Endian Mode                                |
+| -mbig-endian      | Generate code for Big Endian Mode                                   |
+
 </div>
 
 ### <code style="color:cyan">Preprocessor Directives</code>
