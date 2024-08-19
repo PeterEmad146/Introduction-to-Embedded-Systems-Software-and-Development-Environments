@@ -239,3 +239,64 @@
 
 ### <code style="color:cyan">Make</code>
 
+- Building Manually can be tedious
+    * Many GCC flags
+    * Many independent commands
+    * Many build targets
+    * Many supported architectures
+    * Many source files
+        > ex: The Linux Kernel. This software repository contains over 40,000 software files involved in the build process.<br>
+    * Cause consistency issues
+    * Waste development time
+
+- There are tools that help simplify both command line and IDE building with the help of build automation using make.
+
+- Build Management Software (or Build Automation) provides a simple and consistent method for producing a target executable.
+
+- The Build Management Software automated the process of 
+    * Preprocessing
+    * Assembling
+    * Compiling
+    * Linking
+    * Relocating
+
+- Make is yet another free tool we get from the GNU tool chain that is utilized from the command line in the exact same way as GCC.
+
+- It lives in the executable program binaries folder on Linux and has many options just like GCC did.
+
+- One big difference is that it is not part of the GCC tool chain as it is independent of the Compiler or the architecture you're using.
+    > Therefore there is no arm-none-eabi prefix to the command
+
+<div align=center>
+
+| Name      | Symbol | ARM Executable                      |
+|:---------:|:------:|:-----------------------------------:|
+| Assembler | as     | arm-none-eabi-as                    |
+| Compiler  | gcc    | arm-none-eabi-gcc                   |
+| Linker    | ld     | arm-none-eabi-ld                    |
+| Make      | make   | <code style="color:red">make</code> |
+
+</div>
+
+- GNU Make
+    > Tool that controls the generation of executables and other non-source files of a program from the program's source files.
+
+- Makefile
+    > Provides special directions and procedures to make in order to create an executable file from a multitude of input files.
+
+- Makefiles have build targets or build rules
+    > These are recipes for how to build a particular executable or non-source file.
+
+- Executables can have dependencies:
+    * Requirements needed for a particular recipe
+    * These can be auto-generated from make
+
+<img src="./pics/GNU Toolchain.jpg" alt="GNU Toolchain">
+
+ <code style="color:violet">How does the command-line Make system differ from what we did with our IDE?</code>
+ 
+ - IDE is going to auto-generate their Makefiles depending on how you configured your software project.
+    > Meaning it will generate all of the specific flags and linker files for the guards to you architecture.
+
+    > This is very bad for maintainability and portability, as most software teams build their own make system, and version control, so they have a method of controlling when a portable, consistent build system, that can work over a variety of architectures of their own design.
+
