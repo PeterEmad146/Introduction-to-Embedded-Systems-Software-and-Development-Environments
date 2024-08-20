@@ -300,3 +300,67 @@
 
     > This is very bad for maintainability and portability, as most software teams build their own make system, and version control, so they have a method of controlling when a portable, consistent build system, that can work over a variety of architectures of their own design.
 
+### <code style="color:cyan">Makefiles</code>
+
+- One or more files used to tell make how to build a particular project.
+    > makefile, Makefile, sources.mk, includes.mk, ...
+
+- Makefiles have build targets or build rules
+    > $make all <br> $make clean <br> $make main.out <br> $make main.o
+
+- Targets can have dependencies or prerequisites
+    > main.out: main.o my_file.o <br>
+
+        gcc -g -Wl, -Map=main.map -o main.out main.o my_file.o
+
+- A build rule requires a specific syntax of target, :, prerequisites, and commands
+
+- These are recipes for how to build a particular executable or non-source file.
+
+- A recipe can only be executed if the dependencies are met
+
+<img src="./pics/Makefile Rule.jpg" alt="Makefile Rule Illustration">
+
+- Makefile Syntax
+    * Comments start with a <code style="color:red">#</code>
+    * Can include other makefiles
+    * Line continuation is done with a <code style="color:red"> \ </code>
+    * Can create and use variables
+    * Command lines start with a tab
+    * Targets can depend on other targets
+
+- Variables can be set to strings of text and can include other variables.
+    - Variables access is done with the $(variable-name) syntax
+
+- Recursively Expanded Variables (=) get data signed to and substituted into a statement whenever the variable is referenced.
+
+    Example Recursively Expanded Varibales
+
+    > CSTD=c89 
+
+    > CPU=cortex-m0plus 
+    
+    > CC=arm-none-eabi-gcc
+
+- Simply expanded variables get data signed only once at the time of definition. These can be useful for gathering some information about the current system you are compiling on, perhaps to make your makefile dynamic in selecting native versus cross compiler applications. <br>
+
+    Example Simply Expanded Variables
+
+    > ARCH := $(shell arch)
+
+    > CWD := $(shell pwd) 
+
+    > OS := $(shell uname) 
+
+- Use variables for things like 
+    * Compiler flags -> CFLAGS
+    * Linker flags -> LDFLAGS
+
+    C-Flags Example Variables
+
+    > CFLAGS = -g -std= \$ (CSTD) -mcpu= \$ (CPU) -mthumb
+
+- You can create variables that point to your source files and include paths.
+
+- Automatic variables can be used to reduce the amount of typing for a particular rule. They are only useful within a recipe, as they have a scope. 
+
