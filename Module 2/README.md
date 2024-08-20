@@ -362,5 +362,27 @@
 
 - You can create variables that point to your source files and include paths.
 
-- Automatic variables can be used to reduce the amount of typing for a particular rule. They are only useful within a recipe, as they have a scope. 
+- Automatic variables can be used to reduce the amount of typing for a particular rule. They are only useful within a recipe, as they have a scope. <br>
+
+    Automatic Variables
+
+    > \$\< -Prerequisite Name
+
+    > \$@ -Target Rule Name
+
+- Patter Matching (%)
+    - Pattern matches a target object rule with an associated source file.
+    > %.o: %.c<br>
+        > &emsp; &emsp; \& (CC) -C \$@ -o \$\< \$ (CFLAGS)
+
+- Variables implicity used by make
+    - <code style="color:blue">CC</code> --> Compiler
+    - <code style="color:blue">CPP</code> --> Preprocessor Program
+    - <code style="color:blue">AS</code> --> Assembler Program
+    - <code style="color:blue">LD</code> --> Linker
+    - <code style="color:blue">CFLAGS</code> --> C program Flags
+    - <code style="color:blue">CPPFLAGS</code> --> C Preprocessor Flags
+    - <code style="color:blue">ASFLAGS</code> --> Flags for Assembler
+    - <code style="color:blue">LDFLAGS</code> --> C program Linker Flags
+    - <code style="color:blue">LDLIBS</code> --> Extra flags for Libraries
 
