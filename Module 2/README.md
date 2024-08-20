@@ -454,3 +454,130 @@
 
     > ELF Files are not human readable they contain lots of hidden information in binary data
 
+### <code style="color:cyan">QUIZ</code>
+
+1) Which Compiler is used for the ARM Cortex M Processors
+    - gcc
+    - arm-linux-gnueabi-gcc
+    - arm-none-eabi-gcc
+    - None of the above
+
+2) When compiling with gcc, the command line parameter -Wl allow options to be passed to the:
+    - Preprocessor
+    - Assembler
+    - Compiler
+    - Linker
+
+3) In the proprocessing stage of compilation... (Select all that apply)
+    - Header files are actually expanded and included in the source code of the program
+    - Macros are replaced by their respective values
+    - All object files are linked together
+
+4) The assembly code generated depends upon the 
+    - Processor architecture
+    - Memory
+    - None of the above
+
+5) What kind of targets should have a phony directive in the makefile?
+    - A target which is not one of your filenames
+    - Targets that are either an existing filename or not an existing filename
+    - The target which is not used for compilation
+    - None of the above
+
+6) Select all that apply: A linker file .......
+    - Provides details on the memory size and location
+    - Maps compiled sections to physical memory
+    - Resolves dependencies
+    - Can check if memory was over allocated
+    - Can provide the Entry point to the program
+
+7) Make can use what feature to ask the OS for compilation information? 
+    - Dynamic Variables
+    - Shell Functions
+    - Runtime Functions
+    - Conditional Functions
+
+8) Which of the following is a proper declaration of an include guard?
+    - #ifdef__HEADER_H__<br>/* Code here */<br>#endif
+    - #ifdef __HEADER_H__<br>#define __HEADER_H__<br>/* Code here */<br>#endif
+    - #ifndef HEADER_H<br>#endif<br>/* Code here */
+    - #ifndef __HEADER_H__<br>#define __HEADER_H__<br>/* Code here */<br>#endif
+
+9) Variables for a makefile can be defined in 
+    - Makefile
+    - Command line
+    - In the Linker File
+
+10) Cross compiled executables can run on both a host machine and target embedded system
+    - True
+    - False
+
+11) Which on of the following provides all prerequisites listed in a makefile target?
+    - $^
+    - $*
+    - $:
+    - None of the above
+
+12) Which gcc option includes debugging info in the generated object code?
+    - -g
+    - -c
+    - -v
+    - None of the above
+
+13) Make can help generate which of the following files:
+    - Map Files
+    - Executable Files
+    - Object Files
+    - Linker Files
+
+14) The -shared option of gcc generates a share _________ for share library.
+    - Object file
+    - Preprocessed file
+    - Source file
+    - Header file
+
+15) The correct sequence of the GCC compilation process is
+    - Preprocessing -> Compiling -> Linking -> Assembling
+    - Assemble -> Preprocessing -> Compilation -> Linking
+    - Preprocessing -> Compiling -> Linking -> Locating
+    - Locating -> Preprocessing -> Make -> Compilation -> Linking
+
+16) What utility allows you to produce assembly code from a given object file?
+    - Objcopy
+    - Ld
+    - As
+    - Objdump
+
+17) Which compilation setup makes sure that all the undefined symbols in the code are resolved?
+    - Linking
+    - Compiling
+    - Preprocessing
+    - None of the above
+
+18) If a program is linked against a static library then 
+    - Machine code of the used function is copied in the executable 
+    - Used function definition is copied into the preprocessed code
+    - Used function definition is provided at the time of compiling
+    - None of the above
+
+19) What architecture specific flags will need to be used for our ARM cross compiler? (Select all that apply)
+    - -mthumb
+    - -mcpu=cortex-m4
+    - --specs=nosys.specs
+    - -compiler=arm-none-eabi-gcc
+    - -std=c89
+
+20) A processor Executes what kind of code?
+    - Assembly code
+    - Machine code
+    - C Code
+    - Morse Code
+
+21) A compile time switch can help:
+    - Make code portable
+    - Change the target files
+    - Link differnt files
+    - Change target architecture
+    - All of the above
+
+    
