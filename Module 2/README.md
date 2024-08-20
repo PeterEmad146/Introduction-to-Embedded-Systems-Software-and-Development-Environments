@@ -459,125 +459,186 @@
 1) Which Compiler is used for the ARM Cortex M Processors
     - gcc
     - arm-linux-gnueabi-gcc
-    - arm-none-eabi-gcc
+    - arm-none-eabi-gcc ✔️
     - None of the above
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The ARM Cortex M processors are embedded systems that use the 'arm-none-eabi-gcc' compiler. This is a cross-compiler specifically designed for ARM Cortex M microcontrollers, producing code for systems without an operating system (bare-metal).</code>
 
 2) When compiling with gcc, the command line parameter -Wl allow options to be passed to the:
     - Preprocessor
     - Assembler
     - Compiler
-    - Linker
+    - Linker ✔️
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The -Wl option in GCC is used to pass options to the linker. '-Wl,option' sends 'option' to the linker.</code>
 
 3) In the proprocessing stage of compilation... (Select all that apply)
-    - Header files are actually expanded and included in the source code of the program
-    - Macros are replaced by their respective values
+    - Header files are actually expanded and included in the source code of the program ✔️
+    - Macros are replaced by their respective values ✔️
     - All object files are linked together
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">During preprocessing, the compiler expands header files (via #include) and replaces macros with their defined values. Linking occurs later in the compilation process.</code>
+
 4) The assembly code generated depends upon the 
-    - Processor architecture
+    - Processor architecture ✔️
     - Memory
     - None of the above
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Assembly code is directly tied to the processor architecture because it uses the specific instruction set of the processor.</code>
+
 5) What kind of targets should have a phony directive in the makefile?
-    - A target which is not one of your filenames
+    - A target which is not one of your filenames ✔️
     - Targets that are either an existing filename or not an existing filename
     - The target which is not used for compilation
     - None of the above
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white"> .PHONY targets in a Makefile are used for targets that are not files. This prevents confilicts if a file with the same name as the target exists.</code>
+
 6) Select all that apply: A linker file .......
-    - Provides details on the memory size and location
-    - Maps compiled sections to physical memory
+    - Provides details on the memory size and location ✔️
+    - Maps compiled sections to physical memory ✔️
     - Resolves dependencies
-    - Can check if memory was over allocated
-    - Can provide the Entry point to the program
+    - Can check if memory was over allocated ✔️
+    - Can provide the Entry point to the program ✔️
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">A linker script provides detailed control over how the program is loaded into memory, including memory allocation and mapping, and defining the entry point.</code>
 
 7) Make can use what feature to ask the OS for compilation information? 
     - Dynamic Variables
-    - Shell Functions
+    - Shell Functions ✔️
     - Runtime Functions
     - Conditional Functions
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Make can use shell functions (e.g., \$(shell command)) to run commands and retrieve information from the operating system during the build process.</code>
 
 8) Which of the following is a proper declaration of an include guard?
     - #ifdef__HEADER_H__<br>/* Code here */<br>#endif
     - #ifdef __HEADER_H__<br>#define __HEADER_H__<br>/* Code here */<br>#endif
     - #ifndef HEADER_H<br>#endif<br>/* Code here */
-    - #ifndef __HEADER_H__<br>#define __HEADER_H__<br>/* Code here */<br>#endif
+    - #ifndef __HEADER_H__<br>#define __HEADER_H__<br>/* Code here */<br>#endif ✔️
+
+    <code style="color:green">Explanaiton</code>
+    <code style="color:white">This is a typical and correct way to define an include guard to prevent multiple inclusions of the same header file.</code>
 
 9) Variables for a makefile can be defined in 
-    - Makefile
-    - Command line
+    - Makefile ✔️
+    - Command line ✔️
     - In the Linker File
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Variables in a Makefile can be set within the Makefile itself or passed from the command line using 'make var=value'. They are not defined in the linker file.</code>
 
 10) Cross compiled executables can run on both a host machine and target embedded system
     - True
-    - False
+    - False ✔️
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Cross-compiled executables are generally intended for the target system, which often has a different architecture than the host machine, so they cannot run on both.</code>
 
 11) Which on of the following provides all prerequisites listed in a makefile target?
-    - $^
+    - $^ ✔️
     - $*
     - $:
     - None of the above
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">\$^ is a Makefile automatic variable that represents all the prerequisites of the target.</code>
+
 12) Which gcc option includes debugging info in the generated object code?
-    - -g
+    - -g ✔️
     - -c
     - -v
     - None of the above
+    
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The -g option tells GCC to include debugging information in the compiled object code.</code>
 
 13) Make can help generate which of the following files:
-    - Map Files
-    - Executable Files
-    - Object Files
+    - Map Files ✔️
+    - Executable Files ✔️
+    - Object Files ✔️
     - Linker Files
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Make is primarily used to automate the build process, generating object files, executable files, and can generate map files as part of the linking process.</code>
+
 14) The -shared option of gcc generates a share _________ for share library.
-    - Object file
+    - Object file ✔️
     - Preprocessed file
     - Source file
     - Header file
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The -shared option creates a shared object file (.so), which can be used as a share library.</code>
+
 15) The correct sequence of the GCC compilation process is
-    - Preprocessing -> Compiling -> Linking -> Assembling
+    - Preprocessing -> Compiling -> Linking -> Assembling ✔️
     - Assemble -> Preprocessing -> Compilation -> Linking
     - Preprocessing -> Compiling -> Linking -> Locating
     - Locating -> Preprocessing -> Make -> Compilation -> Linking
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The correct sequence is preprocessing (expanding macros and includes), compiling (converting source code to assembly), assembling (converting assembly to machine code), and linking (linking object files together).</code>
 
 16) What utility allows you to produce assembly code from a given object file?
     - Objcopy
     - Ld
     - As
-    - Objdump
+    - Objdump ✔️
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Objdump is a utility that can disassemble an object file, showing the assembly code</code>
 
 17) Which compilation setup makes sure that all the undefined symbols in the code are resolved?
-    - Linking
+    - Linking ✔️
     - Compiling
     - Preprocessing
     - None of the above
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">During linking, the linker resolves all undefined symbols by matching them with defined symbols from other object files or libraries</code>
+
 18) If a program is linked against a static library then 
-    - Machine code of the used function is copied in the executable 
+    - Machine code of the used function is copied in the executable ✔️
     - Used function definition is copied into the preprocessed code
     - Used function definition is provided at the time of compiling
     - None of the above
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">When linking against a static library, the linker copies the machine code for the used functions directly into the final executable.</code>
+
 19) What architecture specific flags will need to be used for our ARM cross compiler? (Select all that apply)
-    - -mthumb
-    - -mcpu=cortex-m4
-    - --specs=nosys.specs
+    - -mthumb ✔️
+    - -mcpu=cortex-m4 ✔️
+    - --specs=nosys.specs ✔️
     - -compiler=arm-none-eabi-gcc
     - -std=c89
 
+    <code style="color:green">Explanation</code>
+    <code style="color:white">These flags are specific to ARM Cortex-M microcontrollers. -mthumb enables the Thumb instruction set, -mcpu=cortex-m4 targets the Cortex-M4 processor, and --specs=nosys.specs tells the compiler not to link against system libraries.</code>
+
 20) A processor Executes what kind of code?
     - Assembly code
-    - Machine code
+    - Machine code ✔️
     - C Code
     - Morse Code
+
+    <code style="color:green">Explanation</code>
+    <code style="color:white">The processor directly executes machine code, which is the binary representation of insturctions.</code>
 
 21) A compile time switch can help:
     - Make code portable
     - Change the target files
     - Link differnt files
     - Change target architecture
-    - All of the above
+    - All of the above ✔️
 
-    
+    <code style="color:green">Explanation</code>
+    <code style="color:white">Compile-time switches can make code portable, change target files, link different files, and change the target architecture, among other things.</code>
