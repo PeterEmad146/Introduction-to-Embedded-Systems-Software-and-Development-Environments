@@ -386,3 +386,71 @@
     - <code style="color:blue">LDFLAGS</code> --> C program Linker Flags
     - <code style="color:blue">LDLIBS</code> --> Extra flags for Libraries
 
+### <code style="color:cyan">Other Useful GNU Bin Tools</code>
+
+- GNU Binary Utilities
+    * The Assembler (as)
+    * The Linker (ld)
+    * Conversion of executables
+    * Sizing compiled images
+    * Library/Archive creation
+    * Symbol Listing
+    * Debugging
+    * Many more...
+
+<div align=center>
+
+<code style="color:orange">Useful GNU Tools</code>
+
+| Name    | Purpose                                                 | ARM Executable        |
+|:-------:|:-------------------------------------------------------:|:---------------------:|
+| size    | Lists the section sizes for object and executable files | arm-none-eabi-size    |
+| nm      | Lists the symbols from object files                     | arm-none-eabi-nm      |
+| objcopy | Copies and translates object files                      | arm-none-eabi-objcopy |
+| objdump | Dispalys information from object files                  | arm-none-eabi-objdump |
+| readelf | Displays information from elf files                     | arm-none-eabi-readelf |
+| gdb     | GNU Project Debugger                                    | gdb                   |
+
+</div>
+
+- GNU Size Utility
+    - Use GCC's size to display the sizes of the compiled sections inside your object files and executable file outputs.
+    - Gives you an idea of your memory footprint is for your executable.
+        - Code Memory
+        - Data Memory
+
+- NM Utility
+    - The symboly utility allows us to investigate the size of all the possible symbols that are defined in a given executable or object file.
+    - Symbols are identifiers in your source code that can be referenced
+        - Variables
+        - Functions
+        - Debug
+
+    > Symbol Descriptions
+
+    > T: Code <br> R: Read Only <br> D: Initialized Data <br> B: Uninitialized Data (BSS) <br>
+
+- Objcopy Utility
+    - Convert object files from one format to another
+    - Make a copy of an object file
+
+    > Object Format Types
+
+    > Binary <br> srec (Motorola S-record) <br> intel Hex Record (ihex) <br> elf31-littlearm <br> elf32-bigarm <br>
+
+- Objdump utility
+    - Dumps information about an object file
+        - Section Headers
+        - Symbols 
+        - Debugging
+    - Can take object files and dump assembly from the machine code
+
+- Readelf Utility
+    - Displays information about a ELF formatted file
+        - Compiled Sections
+        - Memory Sections
+        - Symbol Tables
+        - Architecture Specifics 
+
+    > ELF Files are not human readable they contain lots of hidden information in binary data
+
